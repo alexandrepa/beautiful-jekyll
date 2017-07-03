@@ -5,7 +5,7 @@ subtitle: Start using the footApi API
 ---
 
 The data is grouped by competition (Ligue 1, Premier League...) and season (2014-2015...).  
-So to start you can ask the API which competitions are available with a simple endpoint.
+So to start you can ask the API which [competitions]({{ site.baseurl }}{% link competition.md %}) are available with a simple endpoint.
 
 ## Request
 The API only accepts GET requests.
@@ -57,4 +57,4 @@ See : [API Key]({{ site.baseurl }}{% link apikey.md %})
 
 ## Endpoints
 To see the full API Endpoints and ressources availables you can check the documentation.  
-See : [API Key]({{ site.baseurl }}{% link apikey.md %})
+See : [Documentation](../docs)

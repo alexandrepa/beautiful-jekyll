@@ -1,16 +1,18 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: My first API
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+## Presentation
+My name is Alexandre Patelli. I am a French Software Engineering student at the UTT in Troyes.  
+I'm a huge fan of computer development in general and particularly in ES6 and nodeJS.  
+You can find my other projects on my [Github](https://github.com/alexandrepa).  
+I'm also a big fan of sports and football, supporting the fantastic club of Olympique de Marseille :).  
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+## The API
+I wanted to do my first serious project in nodeJS. So I chose to develop this API because I didn't find any free football API which provides historical results and fixtures.
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+## Future and improvements
+I'm still a young developper so it's very possible that you find bug in this API.  
+So please feel free to send me an [email](mailto://alexandre.patelli@utt.fr) if you find bugs or if you have some suggestions for the next version.

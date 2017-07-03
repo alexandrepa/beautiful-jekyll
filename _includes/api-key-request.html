@@ -1,23 +1,47 @@
-<input id="email" type="text" name="email">
-<button type="button">Send</button>
+<form id ="mail_form">
+<input id="email" type="email" name="email" required>
+<input id="send" type="submit" value="Send">
+</form>
 <div id="response"></div>
 
 <script>
-const url = 'http://localhost:3000/user';
-// The data we are going to send in our request
-let data = {
-    email: 'alex2509du14@hotmail.com'
-}
-// The parameters we are gonna pass to the fetch function
-let fetchData = { 
-    method: 'POST', 
-    body: data
-}
-fetch(url, fetchData)
-.then(function(response) {
-    // Handle response you get from the server
-	console.log(response);
-}).catch(function(err){
-	console.log(err);
-});
+
+const sendEmail = (event) => {
+  event.preventDefault();
+  document.getElementById("mail_form").removeEventListener("submit", sendEmail, false);
+  document.getElementById("send").disabled = true;
+  document.getElementById('response').innerHTML = "";
+  document.getElementById('response').className = "loader";
+  const url = 'http://localhost:3000/user';
+  // The data we are going to send in our request
+  const email = document.getElementById("email").value;
+
+  // The parameters we are gonna pass to the fetch function
+  let fetchData = {
+      method: 'POST',
+      body: 'email='+email,
+      headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+  }
+  fetch(url, fetchData)
+  .then(response => {
+          return response.json();
+      })
+  .then(function(response) {
+      document.getElementById('response').className = "";
+      document.getElementById('response').innerHTML = response.message;
+      document.getElementById("mail_form").addEventListener("submit", sendEmail, false);
+      document.getElementById("send").disabled = false;
+  }).catch(function(err){
+    console.log(err);
+    document.getElementById('response').className = "";
+    document.getElementById("mail_form").addEventListener("submit", sendEmail, false);
+    document.getElementById("send").disabled = false;
+  });
+  return false;
+  }
+
+document.getElementById("mail_form").addEventListener("submit", sendEmail, false);
+
 </script>
