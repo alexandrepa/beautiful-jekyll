@@ -24,7 +24,7 @@ description: A free football API which provides rich and complete data.
 # List of links in the navigation bar
 navbar-links:
   Get started: "getstarted"
-  Documentation: "docs"
+  Documentation: "docs/index.html"
   Competitions: "competition"
   Api Key: "apikey"
   About Me: "aboutme"

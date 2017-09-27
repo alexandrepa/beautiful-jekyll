@@ -57,4 +57,4 @@ See : [API Key]({{ site.baseurl }}{% link apikey.md %})
 
 ## Endpoints
 To see the full API Endpoints and ressources availables you can check the documentation.  
-See : [Documentation](../docs)
+See : [Documentation](../docs/index.html)
